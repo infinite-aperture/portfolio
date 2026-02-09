@@ -5,15 +5,15 @@ Focused on a clean, recruiter-friendly overview of my projects and skills.
 
 ## Live site
 
-- Portfolio: **(change later)**
+- Portfolio: **(add live link here)**
 
 ## Featured projects
 
 ### Pomodoro Tracker (CS50 final project)
 A web-based Pomodoro timer that logs completed focus blocks and displays session history.
 
-- Live demo: **(add live link here)**
-- Source code: **(add GitHub repo link here)**
+- Live demo: https://pomodoro-tracker-50ms.onrender.com/
+- Source code: https://github.com/infinite-aperture/pomodoro-tracker
 - Highlights:
   - 25:00 focus timer with start/pause/reset
   - Server-side logging of completed sessions + history view
@@ -22,8 +22,8 @@ A web-based Pomodoro timer that logs completed focus blocks and displays session
 ### Binary & Subnet Trainer
 Interactive trainer for binary fundamentals and subnetting practice.
 
-- Live demo: **(add live link here)**
-- Source code: **(add GitHub repo link here)**
+- Live demo: https://infinite-aperture.github.io/binary/#trainer
+- Source code: https://github.com/infinite-aperture/binary
 - Highlights:
   - Practice-driven UI with instant feedback
   - Designed to make core networking concepts “click”
@@ -33,7 +33,7 @@ Interactive trainer for binary fundamentals and subnetting practice.
 
 - Next.js, React, TypeScript
 - (add styling framework, e.g. Tailwind / CSS modules)
-- Deployed on (add host, e.g. Vercel)
+- Deployed on Vercel (portfolio), Render (Pomodoro), GitHub Pages (Binary Trainer)
 
 ## Run locally
 

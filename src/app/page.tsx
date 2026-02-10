@@ -10,6 +10,8 @@ export default function Page() {
     workMode: "",
     email:
       "mailto:martin@pixelharbor.dev?subject=Praktikumsanfrage%20FIAE%20%E2%80%93%20Martin%20Duchstein&body=Hallo%20Martin%2C%0D%0A%0D%0AIch%20habe%20dein%20Portfolio%20gesehen%20und%20w%C3%BCrde%20gern%20kurz%20sprechen.%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe%0D%0A",
+    cvEmail:
+      "mailto:martin@pixelharbor.dev?subject=Anfrage%20Lebenslauf%20%E2%80%93%20Martin%20Duchstein&body=Hallo%20Martin%2C%0D%0A%0D%0AIch%20w%C3%BCrde%20gern%20deinen%20aktuellen%20Lebenslauf%20anfragen.%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe%0D%0A",
     links: {
       github: "https://github.com/infinite-aperture",
       linkedin: "https://www.linkedin.com/in/martin-duchstein-7bb498297/",
@@ -38,6 +40,7 @@ export default function Page() {
     "HTTP/DNS Basics",
     "Datenschutz Basics",
     "Docker Basics",
+    "Java Basics"
   ];
 
   const projects = [
@@ -49,15 +52,15 @@ export default function Page() {
         "Productivity tool das robust gegen Browser-Throttling ist",
         "Pomodoro-interval tracking mit history(stats)-Seite",
       ],
-      live: "https://DEIN-LIVE-LINK",
-      code: "https://github.com/DEIN_USERNAME/DEIN_REPO",
+      live: "https://pomodoro-tracker-50ms.onrender.com",
+      code: "https://github.com/infinite-aperture/pomodoro-tracker",
     },
     {
       title: "Networking Trainer Web App",
       oneLiner: "Interaktives Lernen von Networking-Grundlagen (Subnetting/DNS/HTTP).",
       stack: ["React", "TypeScript"],
       highlights: ["Übungsmodus mit Feedback", "Git Deploy + saubere UI/UX"],
-      live: "https://DEIN-LIVE-LINK",
+      live: "https://infinite-aperture.github.io/binary/#trainer",
       code: "https://github.com/infinite-aperture/binary",
     },
     {
@@ -69,6 +72,42 @@ export default function Page() {
       ],
     },
     
+  ];
+
+  const certificates = [
+    {
+      title: "CS50x Certificate",
+      issuer: "Harvard University / edX",
+      date: "Abgeschlossen",
+      description: "Fundierte Computer-Science-Basics und praxisorientierte Softwareentwicklung mit C/Python/SQL sowie Web-Development (Flask, HTML/CSS/JS)",
+      linkLabel: "Zertifikat ansehen",
+      link: "https://cs50.harvard.edu/certificates/bdc17e05-3a83-401f-8e81-5b2fe7c71411",
+    },
+    {
+      title: "Cambridge English Certificate",
+      issuer: "Cambridge Assessment English",
+      date: "C2 Level Pass (highest level)",
+      description: "Nachweis von Englischkenntnissen auf höchstem CEFR-Niveau für professionelle Kommunikation im IT-Umfeld.",
+      linkLabel: "Zertifikat ansehen",
+      link: "#",
+      hideLink: true,
+    },
+    {
+      title: "Foundations of Project Management",
+      issuer: "Google",
+      date: "Abgeschlossen",
+      description: "Grundlagen des Projektmanagements mit Fokus auf Planung, Kommunikation und strukturierte Umsetzung.",
+      linkLabel: "Zertifikat ansehen",
+      link: "https://coursera.org/share/fe546219fc4d8092fdb3e545ff8dedc7",
+    },
+    {
+      title: "Python Programming Fundamentals",
+      issuer: "Microsoft",
+      date: "Abgeschlossen",
+      description: "Fundamentale Python-Kenntnisse als Basis für saubere, praxisnahe Softwareentwicklung.",
+      linkLabel: "Zertifikat ansehen",
+      link: "https://coursera.org/share/247a14493684c18ffaab745abd5ed948",
+    },
   ];
 
   return (
@@ -86,6 +125,9 @@ export default function Page() {
         <header className="flex items-center justify-between gap-4">
           <div className="text-sm text-neutral-600">{profile.role}</div>
           <nav className="flex items-center gap-4 text-sm">
+            <a className="text-neutral-700 hover:text-neutral-900" href="#certificates">
+              Zertifikate
+            </a>
             <a className="text-neutral-700 hover:text-neutral-900" href="#projects">
               Projekte
             </a>
@@ -125,7 +167,13 @@ export default function Page() {
                   className={`inline-flex items-center justify-center rounded-2xl bg-gradient-to-r ${accent.from} ${accent.to} px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-200/70 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300`}
                   href={profile.email}
                 >
-                  Praktikum anfragen
+                  Praktikum anbieten
+                </a>
+                <a
+                  className={`inline-flex items-center justify-center rounded-2xl bg-gradient-to-r ${accent.from} ${accent.to} px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-200/70 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300`}
+                  href={profile.cvEmail}
+                >
+                  Lebenslauf anfragen
                 </a>
                 <a
                   className="inline-flex items-center justify-center rounded-2xl border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-100"
@@ -211,6 +259,46 @@ export default function Page() {
             >
               Kontakt aufnehmen
             </a>
+          </div>
+        </section>
+
+        {/* Certificates */}
+        <section id="certificates" className="mt-10">
+          <div className="flex items-end justify-between gap-4">
+            <h2 className="text-xl font-semibold tracking-tight">Zertifikate</h2>
+          </div>
+
+          <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
+            {certificates.map((certificate) => (
+              <article
+                key={certificate.title}
+                className="group rounded-3xl border border-neutral-200 bg-white/70 p-5 shadow-sm backdrop-blur transition duration-200 hover:-translate-y-1 hover:shadow-md"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-semibold leading-snug">{certificate.title}</h3>
+                  <span
+                    className={`mt-1 h-2 w-2 shrink-0 rounded-full bg-gradient-to-r ${accent.from} ${accent.to} opacity-60 group-hover:opacity-100`}
+                  />
+                </div>
+
+                <p className="mt-2 text-sm text-neutral-700">{certificate.description}</p>
+
+                <div className="mt-4 space-y-1 text-sm text-neutral-700">
+                  <div>
+                    <span className="font-medium text-neutral-900">Issuer:</span> {certificate.issuer}
+                  </div>
+                  <div>
+                    <span className="font-medium text-neutral-900">Status:</span> {certificate.date}
+                  </div>
+                </div>
+
+                {!certificate.hideLink && (
+                  <div className="mt-5 flex gap-3 text-sm">
+                    <A href={certificate.link}>{certificate.linkLabel}</A>
+                  </div>
+                )}
+              </article>
+            ))}
           </div>
         </section>
 

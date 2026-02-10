@@ -6,7 +6,7 @@ export default function Page() {
     name: "Martin Duchstein",
     role: "FIAE Umschüler (Anwendungsentwicklung)",
     location: "Koblenz und Umgebung",
-    availability: "Pflichtpraktikum ab August 2026 · 6 Monate",
+    availability: "Pflichtpraktikum ab August/September 2026 · 6 Monate",
     workMode: "",
     email:
       "mailto:martin@pixelharbor.dev?subject=Praktikumsanfrage%20FIAE%20%E2%80%93%20Martin%20Duchstein&body=Hallo%20Martin%2C%0D%0A%0D%0AIch%20habe%20dein%20Portfolio%20gesehen%20und%20w%C3%BCrde%20gern%20kurz%20sprechen.%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe%0D%0A",
@@ -181,6 +181,13 @@ export default function Page() {
                   href={profile.cvEmail}
                 >
                   Lebenslauf anfragen
+                </a>
+                <a
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-300/40 hover:bg-white/[0.08]"
+                  href="/Infoblatt_Umschulung.pdf"
+                  download
+                >
+                  Infoblatt Umschulung (PDF)
                 </a>
                 <a
                   className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-300/40 hover:bg-white/[0.08]"

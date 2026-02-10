@@ -5,7 +5,7 @@ export default function Page() {
   const profile = {
     name: "Martin Duchstein",
     role: "FIAE Umschüler (Anwendungsentwicklung)",
-    location: "Koblenz",
+    location: "Koblenz und Umgebung",
     availability: "Pflichtpraktikum ab Aug 2026 · 6 Monate",
     workMode: "",
     email:
@@ -149,9 +149,16 @@ export default function Page() {
               </h1>
 
               <p className="mt-3 text-slate-300">
-                Zurzeit in Umschulung zum FIAE, Harvards CS50 (Einführung in Informatik) abgeschlossen. Ich baue kleine Apps end-to-end (UI → Logik → Datenspeicher).
-                Background: medizinisches Labor - Interesse an Health/MedTech-Software (Prozesse, Datenqualität,
-                Datenschutz).
+                Umschulung zum FIAE bei{" "}
+                <a
+                  className="font-medium text-cyan-200 underline decoration-cyan-500/50 underline-offset-4 hover:text-cyan-100 hover:decoration-cyan-300"
+                  href="https://www.wbstraining.de/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WBS Training
+                </a>
+                , CS50 (Harvard) abgeschlossen. Ich entwickle kleine Apps end-to-end (UI → Logik → Datenhaltung). Interesse an Software, die Prozesse vereinfacht und zuverlässig mit Daten arbeitet.
               </p>
 
               <div className="mt-5 flex flex-wrap gap-2">
@@ -234,6 +241,7 @@ export default function Page() {
             <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Info label="Gesucht" value="Pflichtpraktikum FIAE (Anwendungsentwicklung)" />
               <Info label="Zeitraum" value={profile.availability} />
+              <Info label="Geburtsjahr" value="1989" />
               <Info label="Standort" value={`${profile.location} · ${profile.workMode}`} />
               <Info label="Stack" value={stack.join(" · ")} />
             </div>
@@ -247,6 +255,9 @@ export default function Page() {
               </li>
               <li className="flex gap-2">
                 <Dot /> Dokumentationsstark, sauberer Umgang mit Daten
+              </li>
+              <li className="flex gap-2">
+                <Dot /> Bereits vorhandene Berufserfahrung
               </li>
               <li className="flex gap-2">
                 <Dot /> Teamfähig, lernbereit, möchte anpacken und mitgestalten

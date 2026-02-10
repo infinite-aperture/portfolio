@@ -272,7 +272,9 @@ export default function Page() {
             {certificates.map((certificate) => (
               <article
                 key={certificate.title}
-                className="group rounded-3xl border border-white/10 bg-white/[0.04] p-5 shadow-lg shadow-cyan-950/20 backdrop-blur-md transition duration-200 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-cyan-900/30"
+                className={`group rounded-3xl border border-white/10 bg-white/[0.04] p-5 shadow-lg shadow-cyan-950/20 backdrop-blur-md transition duration-200 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-cyan-900/30 ${
+                  certificate.title === "Python Programming Fundamentals" ? "md:col-start-2" : ""
+                }`}
               >
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-semibold leading-snug">{certificate.title}</h3>

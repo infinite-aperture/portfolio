@@ -6,7 +6,7 @@ export default function Page() {
     name: "Martin Duchstein",
     role: "FIAE Umschüler (Anwendungsentwicklung)",
     location: "Koblenz und Umgebung",
-    availability: "Pflichtpraktikum ab Aug 2026 · 6 Monate",
+    availability: "Pflichtpraktikum ab August 2026 · 6 Monate",
     workMode: "",
     email:
       "mailto:martin@pixelharbor.dev?subject=Praktikumsanfrage%20FIAE%20%E2%80%93%20Martin%20Duchstein&body=Hallo%20Martin%2C%0D%0A%0D%0AIch%20habe%20dein%20Portfolio%20gesehen%20und%20w%C3%BCrde%20gern%20kurz%20sprechen.%0D%0A%0D%0AViele%20Gr%C3%BC%C3%9Fe%0D%0A",

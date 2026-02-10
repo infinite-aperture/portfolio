@@ -21,12 +21,12 @@ export default function Page() {
 
   // tasteful accent: change sky/indigo to teal/emerald or violet/fuchsia if you want
   const accent = {
-  from: "from-emerald-500",
-  to: "to-teal-500",
-  softBg: "bg-emerald-50",
-  softBorder: "border-emerald-100",
-  softText: "text-emerald-700",
-  ring: "ring-emerald-200",
+  from: "from-cyan-400",
+  to: "to-emerald-400",
+  softBg: "bg-cyan-500/10",
+  softBorder: "border-cyan-300/30",
+  softText: "text-cyan-200",
+  ring: "ring-cyan-300/40",
   };
 
   const stack = [
@@ -111,44 +111,44 @@ export default function Page() {
   ];
 
   return (
-    <main className="min-h-screen bg-white text-neutral-900">
+    <main className="min-h-screen bg-[#050913] text-slate-100">
       {/* subtle background glow */}
       <div className="pointer-events-none fixed inset-0 -z-10">
         <div
-          className={`absolute left-[-10%] top-[-20%] h-[520px] w-[520px] rounded-full blur-3xl opacity-20 bg-gradient-to-br ${accent.from} ${accent.to}`}
+          className={`absolute left-[-10%] top-[-20%] h-[520px] w-[520px] rounded-full blur-3xl opacity-25 bg-gradient-to-br ${accent.from} ${accent.to}`}
         />
-        <div className="absolute bottom-[-20%] right-[-10%] h-[520px] w-[520px] rounded-full bg-neutral-200/40 blur-3xl opacity-40" />
+        <div className="absolute bottom-[-20%] right-[-10%] h-[520px] w-[520px] rounded-full bg-cyan-500/20 blur-3xl opacity-40" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(22,33,64,0.45),rgba(5,9,19,0.95)_55%)]" />
       </div>
 
       <div className="mx-auto max-w-5xl px-6 py-10">
         {/* Top */}
-        <header className="flex items-center justify-between gap-4">
-          <div className="text-sm text-neutral-600">{profile.role}</div>
-          <nav className="flex items-center gap-4 text-sm">
-            <a className="text-neutral-700 hover:text-neutral-900" href="#certificates">
+        <header className="flex items-center justify-center">
+          <nav className="flex items-center gap-6 text-sm">
+            <a className="text-slate-300 transition hover:text-cyan-200" href="#certificates">
               Zertifikate
             </a>
-            <a className="text-neutral-700 hover:text-neutral-900" href="#projects">
+            <a className="text-slate-300 transition hover:text-cyan-200" href="#projects">
               Projekte
             </a>
-            <a className="text-neutral-700 hover:text-neutral-900" href="#contact">
+            <a className="text-slate-300 transition hover:text-cyan-200" href="#contact">
               Kontakt
             </a>
           </nav>
         </header>
 
         {/* Hero */}
-        <section className="mt-10 overflow-hidden rounded-3xl border border-neutral-200 bg-white/70 p-7 shadow-sm backdrop-blur transition duration-200 hover:shadow-md md:p-10">
+        <section className="mt-10 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-7 shadow-xl shadow-cyan-950/20 backdrop-blur-md transition duration-200 hover:border-cyan-300/30 hover:shadow-cyan-900/30 md:p-10">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-3xl">
               <div className={`mb-6 h-1 w-14 rounded-full bg-gradient-to-r ${accent.from} ${accent.to}`} />
-              <div className="text-sm text-neutral-600">{profile.name}</div>
+              <div className="text-sm text-slate-300">{profile.name}</div>
 
-              <h1 className="mt-2 text-3xl font-semibold tracking-tight md:text-4xl">
+              <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-50 md:text-4xl">
                 Fachinformatiker für Anwendungsentwicklung - Praktikum gesucht! 
               </h1>
 
-              <p className="mt-3 text-neutral-700">
+              <p className="mt-3 text-slate-300">
                 Zurzeit in Umschulung zum FIAE, Harvards CS50 (Einführung in Informatik) abgeschlossen. Ich baue kleine Apps end-to-end (UI → Logik → Datenspeicher).
                 Background: medizinisches Labor - Interesse an Health/MedTech-Software (Prozesse, Datenqualität,
                 Datenschutz).
@@ -164,25 +164,25 @@ export default function Page() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  className={`inline-flex items-center justify-center rounded-2xl bg-gradient-to-r ${accent.from} ${accent.to} px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-200/70 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300`}
+                  className={`inline-flex items-center justify-center rounded-2xl bg-gradient-to-r ${accent.from} ${accent.to} px-4 py-2 text-sm font-semibold text-slate-950 shadow-md shadow-cyan-950/40 transition duration-200 hover:-translate-y-0.5 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300`}
                   href={profile.email}
                 >
                   Praktikum anbieten
                 </a>
                 <a
-                  className={`inline-flex items-center justify-center rounded-2xl bg-gradient-to-r ${accent.from} ${accent.to} px-4 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-sky-200/70 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300`}
+                  className={`inline-flex items-center justify-center rounded-2xl bg-gradient-to-r ${accent.from} ${accent.to} px-4 py-2 text-sm font-semibold text-slate-950 shadow-md shadow-cyan-950/40 transition duration-200 hover:-translate-y-0.5 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300`}
                   href={profile.cvEmail}
                 >
                   Lebenslauf anfragen
                 </a>
                 <a
-                  className="inline-flex items-center justify-center rounded-2xl border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-100"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-300/40 hover:bg-white/[0.08]"
                   href="#projects"
                 >
                   Projekte ansehen
                 </a>
                 <a
-                  className="inline-flex items-center justify-center rounded-2xl border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-100"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-300/40 hover:bg-white/[0.08]"
                   href={profile.links.github}
                   target="_blank"
                   rel="noreferrer"
@@ -190,7 +190,7 @@ export default function Page() {
                   GitHub
                 </a>
                 <a
-                  className="inline-flex items-center justify-center rounded-2xl border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-100"
+                  className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-cyan-300/40 hover:bg-white/[0.08]"
                   href={profile.links.linkedin}
                   target="_blank"
                   rel="noreferrer"
@@ -203,7 +203,7 @@ export default function Page() {
             {/* Photo */}
             <div className="shrink-0">
               <div className="mx-auto">
-                <div className="relative w-32 aspect-square overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm ring-4 ring-emerald-500 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:ring-4 hover:ring-offset-2 hover:ring-offset-white hover:ring-emerald-300">
+                <div className="relative aspect-square w-32 overflow-hidden rounded-3xl border border-white/15 bg-white/[0.03] shadow-lg shadow-cyan-950/30 ring-2 ring-cyan-300/45 transition duration-200 hover:-translate-y-1 hover:shadow-xl hover:ring-cyan-200/70 hover:ring-offset-2 hover:ring-offset-[#050913]">
                   <Image
                     src={profile.photoSrc}
                     alt="Portrait"
@@ -215,7 +215,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <div className="mt-3 text-center text-xs text-neutral-500">
+              <div className="mt-3 text-center text-xs text-slate-400">
                 It-Spezialist in training
               </div>
             
@@ -225,9 +225,9 @@ export default function Page() {
 
         {/* Kurzprofil (tight, high signal) */}
         <section className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-          <div className="rounded-3xl border border-neutral-200 bg-white/70 p-6 shadow-sm backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:shadow-md md:col-span-2">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-lg shadow-cyan-950/20 backdrop-blur-md transition duration-200 hover:-translate-y-0.5 hover:border-cyan-300/30 hover:shadow-cyan-900/30 md:col-span-2">
             <div className="flex items-center justify-between gap-4">
-              <div className="text-sm font-semibold text-neutral-900">Kurzprofil</div>
+              <div className="text-sm font-semibold text-slate-100">Kurzprofil</div>
               
             </div>
 
@@ -239,9 +239,9 @@ export default function Page() {
             </div>
           </div>
 
-          <div className={`rounded-3xl border border-neutral-200 bg-white/70 p-6 shadow-sm backdrop-blur transition duration-200 hover:-translate-y-0.5 hover:shadow-md`}>
-            <div className="text-sm font-semibold text-neutral-900">Warum ich zu euch passe</div>
-            <ul className="mt-3 space-y-2 text-sm text-neutral-700">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-lg shadow-cyan-950/20 backdrop-blur-md transition duration-200 hover:-translate-y-0.5 hover:border-cyan-300/30 hover:shadow-cyan-900/30">
+            <div className="text-sm font-semibold text-slate-100">Warum ich zu euch passe</div>
+            <ul className="mt-3 space-y-2 text-sm text-slate-300">
               <li className="flex gap-2">
                 <Dot /> Prozess- & qualitätsorientiert (Labor-Background)
               </li>
@@ -254,7 +254,7 @@ export default function Page() {
             </ul>
 
             <a
-              className={`mt-5 inline-flex w-full items-center justify-center rounded-2xl ${accent.softBg} px-4 py-2 text-sm font-semibold text-neutral-900 border ${accent.softBorder} shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-md hover:shadow-sky-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300`}
+              className={`mt-5 inline-flex w-full items-center justify-center rounded-2xl border ${accent.softBorder} ${accent.softBg} px-4 py-2 text-sm font-semibold ${accent.softText} shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-cyan-500/15 hover:shadow-md hover:shadow-cyan-900/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300`}
               href={profile.email}
             >
               Kontakt aufnehmen
@@ -272,7 +272,7 @@ export default function Page() {
             {certificates.map((certificate) => (
               <article
                 key={certificate.title}
-                className="group rounded-3xl border border-neutral-200 bg-white/70 p-5 shadow-sm backdrop-blur transition duration-200 hover:-translate-y-1 hover:shadow-md"
+                className="group rounded-3xl border border-white/10 bg-white/[0.04] p-5 shadow-lg shadow-cyan-950/20 backdrop-blur-md transition duration-200 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-cyan-900/30"
               >
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-semibold leading-snug">{certificate.title}</h3>
@@ -281,14 +281,14 @@ export default function Page() {
                   />
                 </div>
 
-                <p className="mt-2 text-sm text-neutral-700">{certificate.description}</p>
+                <p className="mt-2 text-sm text-slate-300">{certificate.description}</p>
 
-                <div className="mt-4 space-y-1 text-sm text-neutral-700">
+                <div className="mt-4 space-y-1 text-sm text-slate-300">
                   <div>
-                    <span className="font-medium text-neutral-900">Issuer:</span> {certificate.issuer}
+                    <span className="font-medium text-slate-100">Issuer:</span> {certificate.issuer}
                   </div>
                   <div>
-                    <span className="font-medium text-neutral-900">Status:</span> {certificate.date}
+                    <span className="font-medium text-slate-100">Status:</span> {certificate.date}
                   </div>
                 </div>
 
@@ -313,7 +313,7 @@ export default function Page() {
             {projects.map((p) => (
               <article
                 key={p.title}
-                className="group rounded-3xl border border-neutral-200 bg-white/70 p-5 shadow-sm backdrop-blur transition duration-200 hover:-translate-y-1 hover:shadow-md"
+                className="group rounded-3xl border border-white/10 bg-white/[0.04] p-5 shadow-lg shadow-cyan-950/20 backdrop-blur-md transition duration-200 hover:-translate-y-1 hover:border-cyan-300/30 hover:shadow-cyan-900/30"
               >
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-semibold leading-snug">{p.title}</h3>
@@ -322,7 +322,7 @@ export default function Page() {
                   />
                 </div>
 
-                <p className="mt-2 text-sm text-neutral-700">{p.oneLiner}</p>
+                <p className="mt-2 text-sm text-slate-300">{p.oneLiner}</p>
 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {p.stack.map((s) => (
@@ -330,7 +330,7 @@ export default function Page() {
                   ))}
                 </div>
 
-                <ul className="mt-4 space-y-2 text-sm text-neutral-700">
+                <ul className="mt-4 space-y-2 text-sm text-slate-300">
                   {p.highlights.map((h) => (
                     <li key={h} className="flex gap-2">
                       <Dot />
@@ -351,21 +351,21 @@ export default function Page() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="mt-12 pb-10">
+        <section id="contact" className="mt-12 pb-10 text-center">
           <h2 className="text-xl font-semibold tracking-tight">Kontakt</h2>
-          <p className="mt-2 text-sm text-neutral-700">
+          <p className="mt-2 text-sm text-slate-300">
             Kurz schreiben reicht - ich antworte schnell und gerne.
           </p>
 
-          <div className="mt-4 flex flex-wrap gap-3">
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
             <a
-              className={`rounded-2xl bg-gradient-to-r ${accent.from} ${accent.to} px-4 py-2 text-sm font-medium text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-200/70 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300`}
+              className={`rounded-2xl bg-gradient-to-r ${accent.from} ${accent.to} px-4 py-2 text-sm font-medium text-slate-950 shadow-sm shadow-cyan-950/30 transition duration-200 hover:-translate-y-0.5 hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300`}
               href={profile.email}
             >
               E-Mail
             </a>
             <a
-              className="rounded-2xl border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-900 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-md hover:shadow-emerald-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300"
+              className="rounded-2xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm font-medium text-slate-100 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-white/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               href={profile.links.linkedin}
               target="_blank"
               rel="noreferrer"
@@ -373,7 +373,7 @@ export default function Page() {
               LinkedIn
             </a>
             <a
-              className="rounded-2xl border border-neutral-300 bg-white px-4 py-2 text-sm font-medium text-neutral-900 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-md hover:shadow-emerald-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300"
+              className="rounded-2xl border border-white/15 bg-white/[0.03] px-4 py-2 text-sm font-medium text-slate-100 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-white/[0.08] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               href={profile.links.github}
               target="_blank"
               rel="noreferrer"
@@ -382,7 +382,7 @@ export default function Page() {
             </a>
           </div>
 
-          <footer className="mt-10 text-sm text-neutral-500">
+          <footer className="mt-10 text-center text-sm text-slate-400">
             © {new Date().getFullYear()} {profile.name}
           </footer>
         </section>
@@ -393,7 +393,7 @@ export default function Page() {
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs text-neutral-700">
+    <span className="inline-flex items-center rounded-full border border-white/20 bg-white/[0.05] px-3 py-1 text-xs text-slate-200">
       {children}
     </span>
   );
@@ -401,7 +401,7 @@ function Pill({ children }: { children: React.ReactNode }) {
 
 function Tag({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full bg-neutral-100 px-3 py-1 text-xs text-neutral-700">
+    <span className="inline-flex items-center rounded-full border border-white/10 bg-cyan-500/10 px-3 py-1 text-xs text-cyan-200">
       {children}
     </span>
   );
@@ -409,22 +409,22 @@ function Tag({ children }: { children: React.ReactNode }) {
 
 function Info({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-neutral-200 bg-neutral-50 p-4">
-      <div className="text-xs font-medium text-neutral-500">{label}</div>
-      <div className="mt-1 text-sm font-semibold text-neutral-900">{value}</div>
+    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+      <div className="text-xs font-medium text-slate-400">{label}</div>
+      <div className="mt-1 text-sm font-semibold text-slate-100">{value}</div>
     </div>
   );
 }
 
 function Dot() {
-  return <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" />;
+  return <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300/80" />;
 }
 
 function A({ href, children }: { href: string; children: React.ReactNode }) {
   const external = href.startsWith("http");
   return (
     <a
-      className="font-medium text-neutral-900 underline decoration-neutral-300 underline-offset-4 hover:decoration-neutral-600"
+      className="font-medium text-cyan-200 underline decoration-cyan-500/50 underline-offset-4 hover:text-cyan-100 hover:decoration-cyan-300"
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
